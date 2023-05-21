@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;800;900&display=swap');
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 80%;
+    background-image: url('./../images/main-grif.svg');
+    background-repeat: no-repeat;
+    min-height: 140vh;
+    margin-top: 20vh;
+}
+.main div {
+    width: 55%;
+}
+.main div p {
+    color: #3B3041;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 50px;
+}
+.main div p span {
+    color: #fff;
+    font-size: 140px;
+    font-weight: 700;
+}
+.testBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(142.83deg, #222222 0%, rgba(6, 6, 6, 0) 100%);
+    align-self: end;
+    width: 50%;
+    border-radius: 20px;
+}
+.text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 47px;
+    color: #fff;
+    width: 90%;
+}
+.text span {
+    color: #573987;
+}
+
+.testBtnBlock {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding-bottom: 100px;
+    
+}
+.testBtnBlock button {
+    width: 300px;
+    height: 125px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: linear-gradient(257.69deg, #5B2FA3 0%, rgba(44, 34, 61, 0.79) 100%);
+    transition: transform .2s ease;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testBtnBlock button:hover {
+    transform: scale(1.1);
+}

@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
+    gap: 12px;
 }
 .ul {
     display: flex;
@@ -37,4 +38,55 @@
     font-size: 12px;
     line-height: 12px;
     font-family: var(--main-font);
+}
+.ul li a:focus {
+    border-bottom: 1px solid #fff;
+}
+
+
+.accountModal {
+    width: 200px;
+    position: absolute;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    color: #fff;
+    align-self: start;
+    text-align: start;
+    margin-top: 8vh;
+    margin-right: 60vh;
+}
+.accountModal p {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #666;
+    align-self: center;
+    padding-right: 12%;
+}
+.accountModal ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: start;
+    gap: 10px;
+    list-style: none;
+    text-align: start;
+}
+.accountModal ul li a {
+    font-family: 'Arial';
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.accountModal ul li a:hover {
+    border-bottom: 1px solid #fff;
+}
+.autorize {
+    font-weight: 600;
+    font-size: 16px;
 }

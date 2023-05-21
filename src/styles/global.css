@@ -9,18 +9,35 @@ body {
 #root {
     width: 100%;
     height: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 300vh;
 }
 .wrapper {
     width: 100%;
     height: 100%;
     display: flex;
+    min-height: 300vh;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    min-height: 100vh;
     background: linear-gradient(180deg, #000000 0%, #000000 93.17%, #1B0631 100%);
+}
+
+.alert-enter {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+.alert-enter-active {
+    opacity: 1;
+    transition: opacity .5s ease, transform .5s ease;
+    transform: translateY(0);
+}
+.alert-exit {
+    opacity: 1;
+}
+.alert-exit-active {
+    opacity: 0;
+    transition: opacity .5s  ease;
 }
