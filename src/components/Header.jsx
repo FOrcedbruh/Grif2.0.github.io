@@ -7,12 +7,12 @@ import { useEffect, useState } from 'react';
 import { CSSTransition } from  'react-transition-group';
 
 
-
 const Header = () => {
 
     const [account, setAccount] = useState(false);
+    const [activeHead, setActiveHead] = useState(false);
     return (
-        <header className={style.header}>
+        <header className={`${style.header} ${activeHead ? `${style.activeHead}` : ""}`}>
             <nav>
                 <section className={style.logo}>
                     <img src={logoGerb}/>
@@ -20,7 +20,7 @@ const Header = () => {
                     <img src={logoGrif}/>
                 </section>
                 <ul className={style.ul}>
-                    <li><a href="#" onClick={() => {setAccount(!account)}}>Аккаунт</a></li>
+                    <li><a href="#" onClick={() => {setAccount(!account); setActiveHead(!activeHead)}}>Аккаунт</a></li>
                     <li><a href="#">Профиль</a></li>
                     <li><a href="#">Тесты</a></li>
                     <li><a href="#">Кейсы</a></li>
@@ -46,7 +46,7 @@ const Header = () => {
                 </ul>
             </div>
             </CSSTransition>
-            
+            <div className={`${style.blur} ${activeHead ? `${style.activeBlur}` : ""}`}></div>
         </header>
     )
 };
