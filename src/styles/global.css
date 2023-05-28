@@ -4,8 +4,18 @@
 body {
     margin: 0;
     height: 0;
+    overflow-x: hidden;
 }
-
+::-webkit-scrollbar {
+    background-color: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #afafaf7e;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #7070707e;
+}
 #root {
     width: 100%;
     height: 100%;
@@ -18,11 +28,15 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    min-height: 300vh;
+    min-height: 200vh;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     background: linear-gradient(180deg, #000000 0%, #000000 93.17%, #1B0631 100%);
+}
+::selection {
+    background-color: #871EC8;
+    color: #fff;
 }
 
 .alert-enter {
@@ -40,4 +54,12 @@ body {
 .alert-exit-active {
     opacity: 0;
     transition: opacity .5s  ease;
+}
+.logAndbetter {
+    margin-top: 30vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

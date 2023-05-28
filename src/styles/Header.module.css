@@ -14,7 +14,7 @@
     transition: height .5s ease;
 }
 .activeHead {
-    height: 200px;
+    height: 280px;
     background: linear-gradient(180deg, #48217c 0%, rgba(0, 0, 0, 0.97) 84.75%);
 }
 .header nav {

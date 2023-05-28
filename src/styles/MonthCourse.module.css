@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --main-font: 'Plus Jakarta Sans', sans-serif;
+}
+.MonthCourseWindow {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    font-family: var(--main-font);
+}
+.text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+    padding-left: 10%;
+    text-shadow: 0px 100px 253px rgba(0, 0, 0, 0.52), 0px 41.7776px 105.697px rgba(0, 0, 0, 0.373804), 0px 22.3363px 56.5109px rgba(0, 0, 0, 0.309976), 0px 12.5216px 31.6795px rgba(0, 0, 0, 0.26), 0px 6.6501px 16.8248px rgba(0, 0, 0, 0.210024), 0px 2.76726px 7.00116px rgba(0, 0, 0, 0.146196);;
+}
+.text p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.085em;
+    color: #000000;
+    width: 50%;
+}
+.text p span {
+    color: #871EC8;
+}
+.text h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 51px;
+
+    letter-spacing: 0.085em;
+
+    color: #000;
+}
+.text h1 span {
+    color: #871EC8;
+}
+.btnWindow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Btn {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-left: 40px;
+    flex-direction: column;
+    border: none;
+    background: linear-gradient(180deg, #B4B4B4 0%, rgb(41, 35, 50) 100%);
+    border-radius: 50px;
+    box-shadow: 0px 100px 261px rgba(0, 0, 0, 0.48), 0px 41.7776px 109.04px rgba(0, 0, 0, 0.34505), 0px 22.3363px 58.2978px rgba(0, 0, 0, 0.286131), 0px 12.5216px 32.6813px rgba(0, 0, 0, 0.24), 0px 6.6501px 17.3568px rgba(0, 0, 0, 0.193869), 0px 2.76726px 7.22254px rgba(0, 0, 0, 0.13495);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+.Btn:hover {
+    transform: scale(1.1) rotateZ(6deg);
+}
+.Btn p {
+    width: 40%;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 51px;
+    letter-spacing: 0.085em;
+}
+.Btn img {
+    align-self: end;
+    padding-right: 24px;
+}

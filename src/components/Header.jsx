@@ -20,7 +20,7 @@ const Header = () => {
                     <img src={logoGrif}/>
                 </section>
                 <ul className={style.ul}>
-                    <li><a href="#" onClick={() => {setAccount(!account); setActiveHead(!activeHead)}}>Аккаунт</a></li>
+                    <li><a href="#" onMouseOver={() => {setAccount(true); setActiveHead(true)}} onClick={() => {setAccount(false); setActiveHead(false)}}>Аккаунт</a></li>
                     <li><a href="#">Профиль</a></li>
                     <li><a href="#">Тесты</a></li>
                     <li><a href="#">Кейсы</a></li>
