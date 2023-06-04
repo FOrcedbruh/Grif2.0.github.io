@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { CSSTransition } from  'react-transition-group';
 import Registration from "./Registration";
 
-const Header = ({activeReg}) => {
+const Header = ({activeReg, lock, setLock, test, setTest}) => {
     
     
 
@@ -23,16 +23,16 @@ const Header = ({activeReg}) => {
                     <img src={logoLine}/>
                     <img src={logoGrif}/>
                 </section>
-                <ul className={style.ul}>
+                <ul className={style.ul} onMouseEnter={() => {if (lock) {setLock(false)}; if (test) {setTest(false)}}}>
                     <li><a href="#" onMouseOver={() => {setAccount(true); setActiveHead(true)}} onClick={() => {setAccount(false); setActiveHead(false)}}>Аккаунт</a></li>
                     <li><a href="#">Профиль</a></li>
-                    <li><a href="#">Тесты</a></li>
+                    <li><a href="#" onClick={() => {setTest(!test)}}>Тесты</a></li>
                     <li><a href="#">Кейсы</a></li>
-                    <li><a href="#">Экзамен</a></li>
-                    <li><a href="#">Абитуриентам</a></li>
+                    <li><a href="#" onClick={() => {setLock(!lock)}}>Экзамен</a></li>
+                    <li><a href="#" onClick={() => {setLock(!lock)}}>Абитуриентам</a></li>
                     <li><a href="#">Новости</a></li>
-                    <li><a href="#">Настройки </a></li>
-                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#" onClick={() => {setLock(!lock)}}>Настройки </a></li>
+                    <li><a href="#" onClick={() => {setLock(!lock)}}>Поддержка</a></li>
                 </ul>
                 <section className="search">
                     <img src={search}/>

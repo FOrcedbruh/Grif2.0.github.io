@@ -34,6 +34,7 @@
     align-self: end;
     width: 50%;
     border-radius: 20px;
+    padding-top: 60px;
 }
 .text {
     font-family: 'Inter';
