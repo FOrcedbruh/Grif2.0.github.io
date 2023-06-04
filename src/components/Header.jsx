@@ -5,10 +5,14 @@ import logoLine from '../images/logo-line.svg';
 import search from '../images/search.svg';
 import { useEffect, useState } from 'react';
 import { CSSTransition } from  'react-transition-group';
+import Registration from "./Registration";
 
+const Header = ({activeReg}) => {
+    
+    
 
-const Header = () => {
-
+ 
+    
     const [account, setAccount] = useState(false);
     const [activeHead, setActiveHead] = useState(false);
     return (
@@ -39,7 +43,7 @@ const Header = () => {
                 <p>Быстрые действия</p>
                 <ul>
                     <li><a href="#"><span className={style.autorize}>Авторизация</span></a></li>
-                    <li><a href="#">Создать новый аккаунт</a></li>
+                    <li><a href="#" onClick={() => {activeReg(); setAccount(false); setActiveHead(false)}}>Создать новый аккаунт</a></li>
                     <li><a href="#">Удалить аккаунт</a></li>
                     <li><a href="#">Настройки аккаунта</a></li>
                     <li><a href="#">Написать в поддержку</a></li>
@@ -47,6 +51,7 @@ const Header = () => {
             </div>
             </CSSTransition>
             <div className={`${style.blur} ${activeHead ? `${style.activeBlur}` : ""}`}></div>
+            
         </header>
     )
 };

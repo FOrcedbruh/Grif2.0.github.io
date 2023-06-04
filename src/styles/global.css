@@ -22,13 +22,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 300vh;
+    min-height: 640vh;
 }
 .wrapper {
     width: 100%;
     height: 100%;
     display: flex;
-    min-height: 200vh;
+    min-height: 640vh;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -62,4 +62,57 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.Carousel-window {
+    width: 60%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-top: 50vh;
+}
+
+.CarouselTxt {
+    margin-top: 20vh;
+    width: 70%;
+    height: 200px;
+    padding-left: 40px;
+    border-left: 2px solid #fff;
+}
+.CarouselTxt p {
+    color: #fff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+}
+.CarouselTxt p span {
+    font-size: 20px;
+    font-weight: 700;
+}
+footer {
+    border-top: 1px solid #fff;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 25vh;
+    width: 80%;
+    margin-top: 40vh;
+    text-align: center;
+}
+footer p {
+    color: #fff;
+    width: 40%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-left: 20%;
 }

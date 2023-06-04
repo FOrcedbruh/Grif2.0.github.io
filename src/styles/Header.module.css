@@ -10,8 +10,9 @@
     display: flex;
     justify-content: center;
     align-items: start;
-    background: linear-gradient(180deg, #241537 0%, rgba(0, 0, 0, 0.97) 84.75%);
+    background: linear-gradient(180deg, #241537 0%, rgba(0, 0, 0, 0.97) 72.81%);
     transition: height .5s ease;
+    z-index: 10;
 }
 .activeHead {
     height: 280px;

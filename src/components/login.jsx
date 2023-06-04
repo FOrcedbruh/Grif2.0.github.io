@@ -1,17 +1,12 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import style from './../styles/login.module.css';
 
 
 
 
-const Login = () => {
-
-
-    const [toggle, setToggle] = useState(false);
-    const [log, setLog] = useState(false);
+export const Log = ({toggle, setToggle, log, setLog}) => {
     return (
-        <div className={style.logSignWindow}>
-            <div className={`${style.login} ${log ? `${style.nonViewLog}` : ""}`}>
+        <div className={`${style.login} ${log ? `${style.nonViewLog}` : ""}`}>
                 <form method="post" id="log" className={style.formLog}>
                     <div className={style.entDiv}>
                         <label htmlFor="name" className={style.label}>Name</label>
@@ -35,7 +30,13 @@ const Login = () => {
                     <p className={style.endText}>Already have an account?<span onClick={() => {setLog(true)}}>Log in</span></p>
                 </form>
             </div>
-            <div className={`${style.signup} ${log ? `${style.activeLog}` : ""}`}>
+    )
+}
+
+export const  Sign = ({toggle, setToggle, log, setLog}) => {
+    
+    return (
+        <div className={`${style.signup} ${log ? `${style.activeLog}` : ""}`}>
                 <form method="post" id="log" className={style.formLog}>
                     <div className={style.entDiv}>
                         <label htmlFor="email" className={style.label}>Email</label>
@@ -55,8 +56,20 @@ const Login = () => {
                     <p className={style.endText}>Don`t have an account?<span onClick={() => {setLog(false)}}>Sign up</span></p>
                 </form>
             </div>
-        </div>
     )
 }
 
-export default Login;
+const Login = () => {
+
+    const [toggle, setToggle] = useState(false);
+    const [log, setLog] = useState(false);
+
+    
+    return (
+        <div className={style.logSignWindow}>
+            <Log toggle={toggle} setToggle={setToggle} log={log} setLog={setLog} />
+            <Sign toggle={toggle} setToggle={setToggle} log={log} setLog={setLog} />
+        </div>
+    )
+}
+ export default Login;

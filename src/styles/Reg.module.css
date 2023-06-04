@@ -1,0 +1,13 @@
+.reg {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-image: url('./../images/LoginGrif.svg');
+    background-repeat: no-repeat;
+}

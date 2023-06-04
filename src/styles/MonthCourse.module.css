@@ -71,7 +71,7 @@
     transition: transform .3s ease-in-out;
 }
 .Btn:hover {
-    transform: scale(1.1) rotateZ(6deg);
+    transform: scale(1.1);
 }
 .Btn p {
     width: 40%;
