@@ -1,11 +1,10 @@
 .NewsSection {
     margin-top: 20vh;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 20vh;
 }
 .news {
     display: flex;
@@ -21,10 +20,10 @@
 }
 .text {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 21px;
     line-height: 35px;
-    letter-spacing: 2.85em;
+    letter-spacing: 2.0em;
     color: #fff;
     text-align: center;
     transform: translateX(6%);
@@ -38,6 +37,8 @@
     background: linear-gradient(92.95deg, #1E1E1E 0%, #111111 100%);
     border-radius: 50px;
     margin-top: 20px;
+    min-width: 500px;
+    padding: 15px;
 }
 .ArticleText {
     display: flex;
@@ -56,6 +57,10 @@
     font-size: 12px;
     line-height: 15px;
     color: #FFFFFF;
+    cursor: pointer;
+}
+.ArticleText p:hover {
+    text-decoration: underline;
 }
 .ArticleText i {
     font-family: 'Inter';
@@ -66,4 +71,19 @@
 
 
     color: #FFFFFF;
+}
+
+.newsBtn {
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: linear-gradient(257.69deg, #5B2FA3 0%, rgba(44, 34, 61, 0.79) 100%);
+    color: #fff;
+    transition: all .5s ease;
+}
+.newsBtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px #6C15FA;
 }

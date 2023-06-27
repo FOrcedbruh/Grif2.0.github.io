@@ -7,12 +7,14 @@ import { useEffect, useState } from 'react';
 import { CSSTransition } from  'react-transition-group';
 import Registration from "./Registration";
 
-const Header = ({activeReg, lock, setLock, test, setTest}) => {
-    
+
+
+
+const Header = ({activeReg, lock, setLock,  blockWrap, setBlockWrap, profile, setProfile, news, setNews, testWin, setTestWin}) => {
     
 
- 
-    
+
+
     const [account, setAccount] = useState(false);
     const [activeHead, setActiveHead] = useState(false);
     return (
@@ -23,14 +25,14 @@ const Header = ({activeReg, lock, setLock, test, setTest}) => {
                     <img src={logoLine}/>
                     <img src={logoGrif}/>
                 </section>
-                <ul className={style.ul} onMouseEnter={() => {if (lock) {setLock(false)}; if (test) {setTest(false)}}}>
+                <ul className={style.ul} onMouseEnter={() => {if (lock) {setLock(false)}}} onClick={() => {if (testWin) {setTestWin(false)}}}>
                     <li><a href="#" onMouseOver={() => {setAccount(true); setActiveHead(true)}} onClick={() => {setAccount(false); setActiveHead(false)}}>Аккаунт</a></li>
-                    <li><a href="#">Профиль</a></li>
-                    <li><a href="#" onClick={() => {setTest(!test)}}>Тесты</a></li>
+                    <li><a href="#" onClick={() => {setProfile(!profile)}}>Профиль</a></li>
+                    <li><a href="#" onClick={() => {setTestWin(true)}}>Тесты</a></li>
                     <li><a href="#">Кейсы</a></li>
                     <li><a href="#" onClick={() => {setLock(!lock)}}>Экзамен</a></li>
                     <li><a href="#" onClick={() => {setLock(!lock)}}>Абитуриентам</a></li>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="#" onClick={() => {setNews(true)}}>Новости</a></li>
                     <li><a href="#" onClick={() => {setLock(!lock)}}>Настройки </a></li>
                     <li><a href="#" onClick={() => {setLock(!lock)}}>Поддержка</a></li>
                 </ul>
@@ -50,10 +52,12 @@ const Header = ({activeReg, lock, setLock, test, setTest}) => {
                 </ul>
             </div>
             </CSSTransition>
-            <div className={`${style.blur} ${activeHead ? `${style.activeBlur}` : ""}`}></div>
+            <div className={`${style.blur} ${activeHead ? `${style.activeBlur}` : ""}`} onClick={() => {setActiveHead(false); setAccount(false)}}></div>
             
         </header>
     )
 };
+
+
 
 export default Header;

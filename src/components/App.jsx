@@ -5,11 +5,13 @@ import News from './News.jsx';
 import { useState, useEffect } from "react";
 import Registration from "./Registration.jsx";
 import Slider from "./Carousel.jsx";
-import { CarouselTxt } from "./Carousel.jsx";
 import Footer from "./Footer.jsx";
 import Lock from "./Lock.jsx";
 import Phones from "./Phones.jsx";
-import ProtoTest from "./TestPrototype.jsx";
+import Profile from "./Profile.jsx";
+import MoreNews from "./MoreNews.jsx";
+import Tests from "./Tests.jsx";
+import TopBtn from './TopBtn.jsx';
 
 
 
@@ -25,28 +27,46 @@ const App = () => {
 
     const [lock, setLock] = useState(false);
 
-    // рендер теста
 
-    const [test, setTest] = useState(false);
+    // блокировка wrapper
+    const [blockWrap, setBlockWrap] = useState(false);
+
+    // рендер профиля
+
+    const [profile, setProfile] = useState(false);
+
+    // рендер новостей
+
+    const [news, setNews] = useState(false);
+
+    // рендер окна с тестами
+
+    const [testWin, setTestWin] = useState(false);
+
+
+
+    
 
 
 
     return (
-        <div className="wrapper">
-            <Header activeReg={activeReg} reg={reg} setReg={setReg} lock={lock} setLock={setLock} test={test} setTest={setTest}/>
-            {reg && <Registration />}
-            <Main />
-            <LogAndBetter />
+        <div className="wrapper" id={blockWrap ? "block" : ""}>
+            <Header testWin={testWin} setTestWin={setTestWin} activeReg={activeReg} reg={reg} setReg={setReg} lock={lock} setLock={setLock}  blockWrap={blockWrap} setBlockWrap={setBlockWrap} profile={profile} setProfile={setProfile} news={news} setNews={setNews}/>
+            {reg && <Registration reg={reg} setReg={setReg}/>}
+            <Main testWin={testWin} setTestWin={setTestWin}/>
             <Phones />
-            <News />
+            <LogAndBetter />
+            <News news={news} setNews={setNews}/>
+            {news && <MoreNews news={news} setNews={setNews}/>}
             <Slider />
-            <CarouselTxt />
             <Footer />
-            {lock && <Lock />}
-            {test && <ProtoTest />}
+            <TopBtn />
+            {lock && <Lock lock={lock} setLock={setLock}/>}
+            {profile && <Profile profile={profile} setProfile={setProfile}/>}
+            {testWin && <Tests testWin={testWin} setTestWin={setTestWin}/>}
+            
         </div>
     )
 }
-
 
 export default App;

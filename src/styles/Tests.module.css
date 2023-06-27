@@ -1,0 +1,80 @@
+.TestsWindow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #000;
+}
+.testBlock {
+    margin-top: 16vh;
+    width: 50%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+.testLevels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 5vh;
+}
+.testBlock section {
+    width: 160px;
+    height: 130px;
+    background: linear-gradient(123.69deg, #DCDCDC 0%, rgba(156, 156, 156, 0.94) 100%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+.testBlock section:hover {
+    transform: scale(1.2);
+}
+.testBlock section p {
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 8px;
+    letter-spacing: 0.085em;
+    padding-left: 10px;
+    color: #000000;
+}
+h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 73px;
+    align-self: start;
+    padding-left: 10vh;
+    color: #FFFFFF;
+}
+
+.closeBtn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    left: 90%;
+    top: 15%;
+    transition: all .5s ease;
+}
+.closeBtn:hover {
+    transform: rotate(180deg);
+    background-color: #6f388d;
+    box-shadow: 5px 1px 50px #a600ff;
+}

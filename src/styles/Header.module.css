@@ -12,7 +12,7 @@
     align-items: start;
     background: linear-gradient(180deg, #241537 0%, rgba(0, 0, 0, 0.97) 72.81%);
     transition: height .5s ease;
-    z-index: 10;
+    z-index: 11;
     padding-top: 8px;
 }
 .activeHead {
@@ -21,10 +21,17 @@
 }
 .header nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    min-width: 60%;
+    width: 100%;
     z-index: 3;
+    overflow-x: scroll;
+}
+.header nav::-webkit-scrollbar {
+    background-color: transparent;
+}
+.header nav::-webkit-scrollbar-thumb {
+    display: none;
 }
 .logo {
     display: flex;
@@ -44,7 +51,7 @@
     text-decoration: none;
     color: #fff;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 12px;
     font-family: var(--main-font);
 }

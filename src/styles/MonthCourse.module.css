@@ -38,7 +38,7 @@
 .text h1 {
     font-style: normal;
     font-weight: 900;
-    font-size: 42px;
+    font-size: 20px;
     line-height: 51px;
 
     letter-spacing: 0.085em;
@@ -47,6 +47,7 @@
 }
 .text h1 span {
     color: #871EC8;
+    font-size: 150%;
 }
 .btnWindow {
     width: 100%;
@@ -56,13 +57,14 @@
     flex-direction: column;
 }
 .Btn {
-    width: 400px;
-    height: 400px;
+    width: 80%;
+    height: 260px;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     padding-left: 40px;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 50px;
     border: none;
     background: linear-gradient(180deg, #B4B4B4 0%, rgb(41, 35, 50) 100%);
     border-radius: 50px;
@@ -81,8 +83,4 @@
     font-size: 42px;
     line-height: 51px;
     letter-spacing: 0.085em;
-}
-.Btn img {
-    align-self: end;
-    padding-right: 24px;
 }

@@ -4,13 +4,13 @@ import testengIcon from './../images/testeng-icon.svg';
 
 
 
-const FirstTest = () => {
+const FirstTest = ({testWin, setTestWin}) => {
     return (
         <section className={styles.testBlock}>
-            <p className={styles.text}><span>Пройдите свой первый тест</span> <br/>на нашей площадке </p>
+            <p className={styles.text}><span>Входной контроль </span></p>
             <section className={styles.testBtnBlock}>
-                <button>Инженер по тестированию <img src={testengIcon}/></button>
-                <button>Основы программно-аппаратной защиты информации <img src={defappIcon}/></button>
+                <button onClick={() => {setTestWin(true)}}><img src={testengIcon}/> Инженер <br/>по тестированию </button>
+                <button><img src={defappIcon}/> <p> <br /> Программно-аппаратная <br /> защита информации</p>  </button>
             </section>
         </section>
     )

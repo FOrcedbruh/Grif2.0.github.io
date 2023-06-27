@@ -10,4 +10,26 @@
     background-color: black;
     background-image: url('./../images/LoginGrif.svg');
     background-repeat: no-repeat;
+    z-index: 10;
+    margin-top: 3%;
+}
+
+.closeBtn {
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-self: end;
+    margin-bottom: 3%;
+    margin-right: 10%;
+    transition: all .5s ease;
+}
+.closeBtn:hover {
+    transform: rotate(180deg);
+    background-color: #6f388d;
+    box-shadow: 5px 1px 50px #a600ff;
 }

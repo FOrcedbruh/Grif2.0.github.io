@@ -1,12 +1,13 @@
 import footerGerb from './../images/footerGerb.svg';
-
+import mosuGerb from './../images/mosuGerb.png';
 
 
 const Footer = () => {
     return (
         <footer>
             <img src={footerGerb} alt="Gerb" />
-            <p>Данный проект создавался при поддержке министерства внутренних дел Российской Федереции, все права защищенны, пользуясь сервисом, вы даете согласие на обработку персональных данных.</p>
+            <p>ФГКОУ ВО <br /><br /> "Московский университет МВД России им. В.Я. Кикотя"</p>
+            <img src={mosuGerb} className='mosuGerb'/>
         </footer>
     )
 }

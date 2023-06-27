@@ -6,8 +6,8 @@ const MonthCourse  = () => {
         <div className={style.MonthCourseWindow}>
             <section className={style.text}>
                 <h1><span>КУРС</span> месяца</h1>
-                <p>По нашей статисктике,за май 2023 года самый частороходимый курс
-<span> - Аналитик Данных*</span></p></section>
+                <p>По  статисктике за  2023 год наиболее востребованным курсом является
+<span> <br /> - Аналитик Данных*</span></p></section>
             <section className={style.btnWindow}>
                 <div className={style.Btn}>
                     <p>

@@ -1,0 +1,110 @@
+.ProfileWindow {
+    width: 80%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 10vh;
+    background: linear-gradient(123.64deg, rgba(255, 255, 255, 0) -22.71%, rgba(255, 255, 255, 0.039) 70.04%);
+    backdrop-filter: blur(21px);
+    border-radius: 30px;
+    border: 1px solid #fff;
+    padding: 2%;
+    z-index: 2;
+}
+.mainDiv {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    gap: 30px;
+}
+.mainDiv span {
+    font-weight: 200;
+}
+.topBlock {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.avaWindow {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.news {
+    width: 600px;
+    height: 250px;
+    background: linear-gradient(102.54deg, rgba(29, 24, 35, 0.4) 0%, rgba(20, 7, 34, 0.32) 100%);
+    box-shadow: 0px 181px 164px rgba(0, 0, 0, 0.35), 0px 75.6175px 68.5153px rgba(0, 0, 0, 0.251599), 0px 40.4287px 36.6315px rgba(0, 0, 0, 0.208638), 0px 22.664px 20.5353px rgba(0, 0, 0, 0.175), 0px 12.0367px 10.9062px rgba(0, 0, 0, 0.141362), 0px 5.00873px 4.5383px rgba(0, 0, 0, 0.098401);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 20px;
+    gap: 6%;
+}
+.news article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.news h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 28px;
+    align-self: center;
+
+    color: #FFFFFF;
+    width: 40%;
+}
+.new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+.new p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.new p:hover {
+    text-decoration: underline;
+}
+.closeBtn {
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-self: end;
+    margin-bottom: 3%;
+    transition: all .5s ease;
+}
+.closeBtn:hover {
+    transform: rotate(180deg);
+    background-color: #6f388d;
+    box-shadow: 5px 1px 50px #a600ff;
+}

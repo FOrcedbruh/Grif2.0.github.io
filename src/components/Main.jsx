@@ -2,16 +2,18 @@ import styles from './../styles/Main.module.css';
 import FirstTest from './FirstTest';
 
 
-const Main = () => {
+const Main = ({testWin, setTestWin}) => {
     return (
         <main className={styles.main}>
             <div>
                 <p>
-                <span>ГРИФ.</span> первый полностью  бесплатный ресурс повышения уровня знаний в сфере IT. 
+                 Цифровая платформа <br/> повышения уровня компетенции в сфере IT. 
                 </p>
             </div>
-            <FirstTest />
+            <FirstTest testWin={testWin} setTestWin={setTestWin}/>
         </main>
     )
 }
+
+
 export default Main;

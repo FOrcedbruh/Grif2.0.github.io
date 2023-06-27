@@ -9,17 +9,15 @@ import axios from 'axios';
 
 
 
-
-
 const NewBlock = ({article}) => {
 
     return (
         <article className={style.newBlock}>
             <div className={style.ArticleText}>
-                <p>{article.company.name}</p>
-                <i>5 мая 2023 г.</i>
+                <p>{article.title}</p>
+                <i>{article.created}</i>
             </div>
-            <img src={newImage}/>
+            <img src={article.image}/>
         </article>
     )
 }
@@ -27,20 +25,19 @@ const NewBlock = ({article}) => {
 
 
 
-const News = () => {
-    
+const News = ({news, setNews}) => {
 
 
-    const src = "https://jsonplaceholder.typicode.com/users";
+    const src = "http://80.78.254.78:8000/news/";
     
     const [articles, setArticles] = useState([]);
     useEffect(() => {
         axios.get(src).then(data => {
-            setArticles(data.data);
+            setArticles(data.data.results);
         })
     }, []);
 
-
+    let count = 0;
     return (
         <section className={style.NewsSection}>
             <img src={NewsGerb}/>
@@ -48,14 +45,15 @@ const News = () => {
                 <p className={style.text}>НОВОСТИ</p>
                 <img src={line}/>
                 <div>
-                    
-                        {articles.map(article => {
-                        return (
-                            <NewBlock article={article}/>
-                            )
+                        {articles.map(article => {count++;
+                        if (count <= 5)
+                            return (
+                                <NewBlock article={article}/>
+                                )
                         })}
                     
                 </div>
+                <button className={style.newsBtn} onClick={() => {setNews(true)}}>More news</button>
             </div>
             <img src={NewsGrif}/>
         </section>

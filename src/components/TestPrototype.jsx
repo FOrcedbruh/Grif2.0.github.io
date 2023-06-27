@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import style from './../styles/ProtoTest.module.css';
+import axios from 'axios';
 
 const Questions = [
     {
@@ -32,13 +33,29 @@ const Questions = [
 const Result = ({correct}) => {
     return (
         <div className={style.testWindow}>
-            <h1>Вы отгадали {correct} ответа из {Questions.length}</h1>
+            <div className={style.result}>
+                <h1>Правильных ответов {correct}  из  {Questions.length}</h1>
+            </div>
         </div>
     )
 }
 
 
+const src = 'http://80.78.254.78:8000/task/list/1/';
+
 const ProtoTest = () => {
+
+    const [variants, setVariants] = useState([]);
+
+
+    useEffect(() => {
+        axios.get(src).then(data => {
+            console.log(data.data.results);
+            setVariants(data.data.results)
+        })
+    }, []);
+
+
     const [step, setStep] = useState(0);
     const [correct, setCorrect] = useState(0);
     const question = Questions[step];

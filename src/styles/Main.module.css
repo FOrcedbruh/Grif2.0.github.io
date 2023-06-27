@@ -5,20 +5,24 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    width: 80%;
+    width: 100%;
     background-image: url('./../images/main-grif.svg');
     background-repeat: no-repeat;
     min-height: 140vh;
     margin-top: 20vh;
+    padding-left: 12%;
+    padding-right: 15%;
+    padding-bottom: 30%;
 }
 .main div {
-    width: 55%;
+    width: 100%;
+    position: absolute;
 }
 .main div p {
-    color: #3B3041;
+    color: #4d345a;
     font-family: "Inter";
     font-weight: 600;
-    font-size: 50px;
+    font-size: 38px;
 }
 .main div p span {
     color: #fff;
@@ -32,21 +36,23 @@
     align-items: center;
     background: linear-gradient(142.83deg, #222222 0%, rgba(6, 6, 6, 0) 100%);
     align-self: end;
-    width: 50%;
+    width: 80%;
     border-radius: 20px;
     padding-top: 60px;
+    gap: 40px;
 }
 .text {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 39px;
+    font-size: 32px;
     line-height: 47px;
     color: #fff;
     width: 90%;
+    text-align: center;
 }
 .text span {
-    color: #573987;
+    color: #9451ffcb;
 }
 
 .testBtnBlock {
@@ -59,7 +65,7 @@
     
 }
 .testBtnBlock button {
-    width: 40%;
+    width: 45%;
     height: 125px;
     border: none;
     outline: none;
@@ -77,6 +83,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: start;
+    gap: 20px;
 }
 .testBtnBlock button:hover {
     transform: scale(1.1);
