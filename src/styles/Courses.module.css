@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800&display=swap');
+
+
+
+
+.coursesWindow {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: black;
+}
+.courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 50%;
+    padding-left: 15vh;
+    gap: 6vh;
+}
+.courseLevels {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 20vh;
+    width: 100%;
+    gap: 2vh;
+}
+.courseLevels h2{
+    color: #FFF;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+.header h1 {
+    color: #FFF;
+    font-size: 60px;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    line-height: normal;
+    padding: 0;
+}
+.image {
+    width: 50%;
+}
+.levelsBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+}
+.level {
+    width: 158px;
+    height: 129px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #FFF 0%, #E9E9E9 100%);
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    color: #000;
+    font-size: 7px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.595px;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+.level:hover {
+    transform: scale(1.13);
+}
+#easy {
+    color: #6ECF22;
+}
+#pro {
+    color: #EE9A1C;
+}
+#profile {
+    color: #E01A1A;
+}
+#special {
+    color: #8819DF;
+}
+
+
+
+.closeBtn {
+    width: 5vh;
+    height: 5vh;
+    position: absolute;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    left: 90%;
+    top: 15%;
+    transition: all .5s ease;
+}
+.closeBtn:hover {
+    transform: rotate(180deg);
+    background-color: #6f388d;
+    box-shadow: 5px 1px 50px #a600ff;
+}
+.closeBtn img {
+    width: 100%;
+    height: 100%;
+}

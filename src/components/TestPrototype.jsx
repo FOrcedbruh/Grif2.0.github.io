@@ -2,31 +2,34 @@ import { useState, useEffect } from "react";
 import style from './../styles/ProtoTest.module.css';
 import axios from 'axios';
 
+
+
+
 const Questions = [
     {
-        title: "Самый популярный язык программирования  ? ",
-        variants: ["JavaScript", "GO", "C++", "Python"],
+        title: "Использование сервисов проверкуи IMEI телефонов позволяет установить следующую информацию: ",
+        variants: ["группа крови", "отпечатки пальцев", "биометрию лица", "модель устройства с рядом его технических характеристик"],
         correct: 3
     },
     {
-        title: " Основной ГОСТ по защите информации  ? ",
-        variants: ["50577-2018", "50922-2006", "50462-2009", "53114-2008"],
-        correct: 1
-    },
-    {
-        title: "React - это...",
-        variants: ["библиотека", "фреймворк", "плагин", "ключевое слово"],
+        title: " Парсер – это",
+        variants: ["программа, сервис или скрипт, который собирает данные с указанных веб-ресурсов, анализирует их и выдает в нужном формате", "база данных", "веб-ресурс", "криптограмма"],
         correct: 0
     },
     {
-        title: "Основная библиотека JS ? ",
-        variants: ["VueJS", "Lume", "React", "Phython"],
-        correct: 2
+        title: "ID – это",
+        variants: ["уникальный индивидуальный номер", "время", "место", "событие"],
+        correct: 0
     },
     {
-        title: "На каких уровнях модели OSI работает межсетевой экран ? ",
-        variants: ["сетевой/транспортный", "физический/сетевой", "транспортный/канальный", "канальный/прикладной "],
-        correct: 1
+        title: "Как выглядит банковский идентификатор номера(БИН):",
+        variants: ["5555 55", "AAAA AA", "AA55 A5", "AAAA"],
+        correct: 0
+    },
+    {
+        title: "Что такое домен?",
+        variants: ["Имя сайта (Символьное имя)", "Вид метаданных"],
+        correct: 0
     }
 ];
 
@@ -41,11 +44,11 @@ const Result = ({correct}) => {
 }
 
 
-const src = 'http://80.78.254.78:8000/task/list/1/';
+//const src = 'http://80.78.254.78:8000/task/list/1/';
 
 const ProtoTest = () => {
 
-    const [variants, setVariants] = useState([]);
+ /*   const [variants, setVariants] = useState([]);
 
 
     useEffect(() => {
@@ -54,7 +57,7 @@ const ProtoTest = () => {
             setVariants(data.data.results)
         })
     }, []);
-
+*/
 
     const [step, setStep] = useState(0);
     const [correct, setCorrect] = useState(0);

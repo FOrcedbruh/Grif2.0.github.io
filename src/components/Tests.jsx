@@ -1,6 +1,7 @@
 import style from './../styles/Tests.module.css';
 import grif from './../images/testsWinGrif.png';
 import ProtoTest from './TestPrototype.jsx';
+import ProtoTest_sec from './ProtoTest_second.jsx';
 import { useState, useEffect } from 'react';
 import close from './../images/closeTests.svg';
 import axios from 'axios';
@@ -11,7 +12,7 @@ const Tests = ({testWin, setTestWin}) => {
 
     // получение категорий
 
-    const src = 'http://80.78.254.78:8000/task/category/';
+    /*const src = 'http://80.78.254.78:8000/task/category/';
 
     const[categories, setCategory] = useState([]);
 
@@ -20,9 +21,12 @@ const Tests = ({testWin, setTestWin}) => {
             setCategory(data.data.results);
         })
     }, [])
+    */
 
     // рендер первого теста
     const [protoTest, setProtoTest] = useState(false);
+    const [protoTest_sec, setProtoTest_sec] = useState(false);
+
 
     return (
         <section className={style.TestsWindow}>
@@ -31,17 +35,23 @@ const Tests = ({testWin, setTestWin}) => {
             <div className={style.testBlock}>
                 <h1>Тесты</h1>
                 <div className={style.testLevels}>
-                    {categories.map(category => {
+                    {/*categories.map(category => {
                         return(
                             <section onClick={() => {setProtoTest(true)}}><p>{category.name}</p></section>
                         )
-                    })}
+                    })*/}
+                    <section onClick={() => {setProtoTest(true)}}><p>test</p></section>
+                    <section onClick={() => {setProtoTest_sec(true)}}><p>test</p></section>
+                    <section onClick={() => {setProtoTest(true)}}><p>test</p></section>
+                    <section onClick={() => {setProtoTest_sec(true)}}><p>test</p></section>
+
                 </div>
             </div>
             <div className={style.decorate}>
                 <img src={grif}/>
             </div>
             {protoTest && <ProtoTest />}
+            {protoTest_sec && <ProtoTest_sec />}
         </section>
     )
 }

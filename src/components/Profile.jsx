@@ -9,7 +9,7 @@ import close from './../images/closeTests.svg';
 
 const Profile = ({profile, setProfile}) => {
 
-    const [articles, setArticles] = useState([])
+    /*const [articles, setArticles] = useState([])
     const src = "http://80.78.254.78:8000/news/";
 
     useEffect(() => {
@@ -18,6 +18,7 @@ const Profile = ({profile, setProfile}) => {
         })
     }, [])
     let count = 0;
+    */
 
     return (
         <section className={style.ProfileWindow}>
@@ -33,7 +34,7 @@ const Profile = ({profile, setProfile}) => {
                     <h1>НОВОСТИ</h1>
                     <img src={Line}/>
                     <article>
-                        {articles.map(article => {
+                        {/*articles.map(article => {
                             count++; 
                             if (count <= 3) {
                                 return (
@@ -44,11 +45,27 @@ const Profile = ({profile, setProfile}) => {
                                     </div>
                                 )
                             }
-                        })}
+                        })*/}
+                        <div className={style.new}>
+                            <p>
+                                В России разработали систему для настройки оптимальной работы головного мозга
+                            </p>
+                        </div>
+                        <div className={style.new}>
+                            <p>
+                                В России разработали систему для настройки оптимальной работы головного мозга
+                            </p>
+                        </div>
+                        <div className={style.new}>
+                            <p>
+                                В России разработали систему для настройки оптимальной работы головного мозга
+                            </p>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
+        
     )
 }
 

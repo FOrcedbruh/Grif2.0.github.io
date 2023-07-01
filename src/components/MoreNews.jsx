@@ -3,13 +3,13 @@ import style from './../styles/MoreNews.module.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const src = "http://80.78.254.78:8000/news/";
+//const src = "http://80.78.254.78:8000/news/";
 
 const NewItem = ({article}) => {
     return (
         <article className={style.new}>
-            <p>{article.title}</p>
-            <i>{article.created}</i>
+            <p>Технодурка: персонализированная ежедневная газета с ChatGPT</p>
+            <i>4 мая 2023 г.</i>
         </article>
     )
 }
@@ -19,7 +19,7 @@ const NewItem = ({article}) => {
 
 const MoreNews = ({news, setNews}) => {
 
-    let count = 0;
+    /*let count = 0;
 
     const [articles, setArticle] = useState([]);
 
@@ -30,7 +30,7 @@ const MoreNews = ({news, setNews}) => {
         })
 
     }, [])
-
+    */
 
     return (
         <section className={style.moreNewsWindow}>
@@ -39,13 +39,21 @@ const MoreNews = ({news, setNews}) => {
                 <img src={line}/>
             </div>
             <div className={style.news}>
-                {articles.map(article => {count++;
+                {/*articles.map(article => {count++;
                     if (count <= 8) {
                         return (
                             <NewItem article={article}/>
                         )
                     }
-                })}
+                })*/}
+                <NewItem />
+                <NewItem />
+                <NewItem />
+                <NewItem />
+                <NewItem />
+                <NewItem />
+                <NewItem />
+                <NewItem />
             </div>
             <button className={style.closeBtn} onClick={() => {setNews(false)}}>
                 Назад

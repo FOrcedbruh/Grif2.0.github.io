@@ -12,7 +12,7 @@ import Profile from "./Profile.jsx";
 import MoreNews from "./MoreNews.jsx";
 import Tests from "./Tests.jsx";
 import TopBtn from './TopBtn.jsx';
-
+import Courses from "./Courses.jsx";
 
 
 
@@ -44,14 +44,17 @@ const App = () => {
     const [testWin, setTestWin] = useState(false);
 
 
+    // рендер окна с курсами
 
-    
+     const [courses, setCourses] = useState(false);
+
+
 
 
 
     return (
         <div className="wrapper" id={blockWrap ? "block" : ""}>
-            <Header testWin={testWin} setTestWin={setTestWin} activeReg={activeReg} reg={reg} setReg={setReg} lock={lock} setLock={setLock}  blockWrap={blockWrap} setBlockWrap={setBlockWrap} profile={profile} setProfile={setProfile} news={news} setNews={setNews}/>
+            <Header testWin={testWin} setTestWin={setTestWin} activeReg={activeReg} reg={reg} setReg={setReg} lock={lock} setLock={setLock}  blockWrap={blockWrap} setBlockWrap={setBlockWrap} profile={profile} setProfile={setProfile} news={news} setNews={setNews} courses={courses} setCourses={setCourses}/>
             {reg && <Registration reg={reg} setReg={setReg}/>}
             <Main testWin={testWin} setTestWin={setTestWin}/>
             <Phones />
@@ -64,7 +67,7 @@ const App = () => {
             {lock && <Lock lock={lock} setLock={setLock}/>}
             {profile && <Profile profile={profile} setProfile={setProfile}/>}
             {testWin && <Tests testWin={testWin} setTestWin={setTestWin}/>}
-            
+            {courses && <Courses courses={courses} setCourses={setCourses}/>}
         </div>
     )
 }

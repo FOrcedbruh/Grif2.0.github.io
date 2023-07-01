@@ -14,10 +14,10 @@ const NewBlock = ({article}) => {
     return (
         <article className={style.newBlock}>
             <div className={style.ArticleText}>
-                <p>{article.title}</p>
-                <i>{article.created}</i>
+                <p>Придумали, как сделать лампы накаливания блее энергоэффективными и долговечными</p>
+                <i>5 мая 2023 г.</i>
             </div>
-            <img src={article.image}/>
+            <img/>
         </article>
     )
 }
@@ -28,7 +28,7 @@ const NewBlock = ({article}) => {
 const News = ({news, setNews}) => {
 
 
-    const src = "http://80.78.254.78:8000/news/";
+   /* const src = "http://80.78.254.78:8000/news/";
     
     const [articles, setArticles] = useState([]);
     useEffect(() => {
@@ -38,6 +38,7 @@ const News = ({news, setNews}) => {
     }, []);
 
     let count = 0;
+    */
     return (
         <section className={style.NewsSection}>
             <img src={NewsGerb}/>
@@ -45,13 +46,17 @@ const News = ({news, setNews}) => {
                 <p className={style.text}>НОВОСТИ</p>
                 <img src={line}/>
                 <div>
-                        {articles.map(article => {count++;
+                        
+                        { /*articles.map(article => {count++;
                         if (count <= 5)
                             return (
                                 <NewBlock article={article}/>
                                 )
-                        })}
-                    
+                        })*/}
+                        <NewBlock />
+                        <NewBlock />
+                        <NewBlock />
+                        <NewBlock />
                 </div>
                 <button className={style.newsBtn} onClick={() => {setNews(true)}}>More news</button>
             </div>

@@ -10,7 +10,7 @@ import Registration from "./Registration";
 
 
 
-const Header = ({activeReg, lock, setLock,  blockWrap, setBlockWrap, profile, setProfile, news, setNews, testWin, setTestWin}) => {
+const Header = ({activeReg, lock, setLock,  blockWrap, setBlockWrap, profile, setProfile, news, setNews, testWin, setTestWin, courses, setCourses}) => {
     
 
 
@@ -29,7 +29,7 @@ const Header = ({activeReg, lock, setLock,  blockWrap, setBlockWrap, profile, se
                     <li><a href="#" onMouseOver={() => {setAccount(true); setActiveHead(true)}} onClick={() => {setAccount(false); setActiveHead(false)}}>Аккаунт</a></li>
                     <li><a href="#" onClick={() => {setProfile(!profile)}}>Профиль</a></li>
                     <li><a href="#" onClick={() => {setTestWin(true)}}>Тесты</a></li>
-                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#" onClick={() => {setCourses(!courses)}}> Курсы</a></li>
                     <li><a href="#" onClick={() => {setLock(!lock)}}>Экзамен</a></li>
                     <li><a href="#" onClick={() => {setLock(!lock)}}>Абитуриентам</a></li>
                     <li><a href="#" onClick={() => {setNews(true)}}>Новости</a></li>
@@ -48,7 +48,7 @@ const Header = ({activeReg, lock, setLock,  blockWrap, setBlockWrap, profile, se
                     <li><a href="#" onClick={() => {activeReg(); setAccount(false); setActiveHead(false)}}>Создать новый аккаунт</a></li>
                     <li><a href="#">Удалить аккаунт</a></li>
                     <li><a href="#">Настройки аккаунта</a></li>
-                    <li><a href="#">Написать в поддержку</a></li>
+                    <li><a href="#" onClick={() => {setLock(!lock); setAccount(false); setActiveHead(false)}}>Написать в поддержку</a></li>
                 </ul>
             </div>
             </CSSTransition>
