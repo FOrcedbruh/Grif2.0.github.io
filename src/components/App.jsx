@@ -2,7 +2,7 @@ import Header from "./Header";
 import Main from "./Main";
 import LogAndBetter from "./LogAndBetter.jsx";
 import News from './News.jsx';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Registration from "./Registration.jsx";
 import Slider from "./Carousel.jsx";
 import Footer from "./Footer.jsx";
@@ -13,6 +13,11 @@ import MoreNews from "./MoreNews.jsx";
 import Tests from "./Tests.jsx";
 import TopBtn from './TopBtn.jsx';
 import Courses from "./Courses.jsx";
+import WelcomeMessage from './WelcomeMessage.jsx';
+import MainTest from "./MainTest.jsx";
+import ProgressBar from "./ProgressBar.jsx";
+
+
 
 
 
@@ -49,14 +54,41 @@ const App = () => {
      const [courses, setCourses] = useState(false);
 
 
+     // рендер сообщения с приветствием
 
 
+     const [message, setMessage] = useState(false);
+
+
+     // рендер главного теста
+
+     const [mainTest, setMainTest] = useState(false)
+
+    const pressEsc = e => {
+        if (e.key === 'Escape') {
+            setCourses(false);
+            setNews(false);
+            setTestWin(false);
+            setProfile(false);
+            setMainTest(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('keydown', pressEsc);
+    }, [])
+
+    let wrapperRef = useRef();
+
+    
 
     return (
-        <div className="wrapper" id={blockWrap ? "block" : ""}>
+        <div className="wrapper" id={blockWrap ? "block" : ""} ref={wrapperRef}>
+            <ProgressBar wrapperRef={wrapperRef}/>
             <Header testWin={testWin} setTestWin={setTestWin} activeReg={activeReg} reg={reg} setReg={setReg} lock={lock} setLock={setLock}  blockWrap={blockWrap} setBlockWrap={setBlockWrap} profile={profile} setProfile={setProfile} news={news} setNews={setNews} courses={courses} setCourses={setCourses}/>
             {reg && <Registration reg={reg} setReg={setReg}/>}
-            <Main testWin={testWin} setTestWin={setTestWin}/>
+            {message && <WelcomeMessage message={message} setMeassge={setMessage}/>}
+            <Main testWin={testWin} setTestWin={setTestWin} mainTest={mainTest} setMainTest={setMainTest}/>
             <Phones />
             <LogAndBetter />
             <News news={news} setNews={setNews}/>
@@ -64,6 +96,7 @@ const App = () => {
             <Slider />
             <Footer />
             <TopBtn />
+            {mainTest && <MainTest mainTest={mainTest} setMainTest={setMainTest}/>}
             {lock && <Lock lock={lock} setLock={setLock}/>}
             {profile && <Profile profile={profile} setProfile={setProfile}/>}
             {testWin && <Tests testWin={testWin} setTestWin={setTestWin}/>}

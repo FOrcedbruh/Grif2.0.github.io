@@ -20,6 +20,8 @@ const Profile = ({profile, setProfile}) => {
     let count = 0;
     */
 
+
+
     return (
         <section className={style.ProfileWindow}>
             <button className={style.closeBtn}><img src={close} onClick={() => {setProfile(false)}}/></button>

@@ -1,0 +1,35 @@
+.message {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 16%;
+    height: 10%;
+    z-index: 6;
+    top: 20%;
+    left: 80%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #a600ff;
+}
+.message p {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    padding: 0;
+}
+.progress {
+    height: 5px;
+    background-color: #00FF1A;
+    width: 10%;
+    align-self: start;
+    margin-left: 5%;
+    margin-right: 5%;
+    transition: all .10s ease;
+    border-radius: 20px;
+}

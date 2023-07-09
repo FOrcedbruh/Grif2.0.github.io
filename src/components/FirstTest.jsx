@@ -4,13 +4,16 @@ import testengIcon from './../images/testeng-icon.svg';
 
 
 
-const FirstTest = ({testWin, setTestWin}) => {
+const FirstTest = ({setTestWin, testWin, mainTest, setMainTest}) => {
+
+
+
     return (
         <section className={styles.testBlock}>
             <p className={styles.text}><span>Входной контроль </span></p>
             <section className={styles.testBtnBlock}>
                 <button onClick={() => {setTestWin(true)}}><img src={testengIcon}/> Инженер <br/>по тестированию </button>
-                <button><img src={defappIcon}/> <p> <br /> Программно-аппаратная <br /> защита информации</p>  </button>
+                <button onClick={() => {setMainTest(true)}}><img src={defappIcon}/> <p> <br /> Программно-аппаратная <br /> защита информации</p>  </button>
             </section>
         </section>
     )

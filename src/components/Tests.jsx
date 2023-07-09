@@ -28,6 +28,19 @@ const Tests = ({testWin, setTestWin}) => {
     const [protoTest_sec, setProtoTest_sec] = useState(false);
 
 
+    const keyPress = (e) => {
+        if (e.key === 'Escape') {
+            setProtoTest(false);
+            setProtoTest_sec(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('keydown', keyPress);
+
+    }, []);
+
+
     return (
         <section className={style.TestsWindow}>
             <button className={style.closeBtn} onClick={() => {setTestWin(false)}}><img src={close}/></button>
@@ -50,8 +63,8 @@ const Tests = ({testWin, setTestWin}) => {
             <div className={style.decorate}>
                 <img src={grif}/>
             </div>
-            {protoTest && <ProtoTest />}
-            {protoTest_sec && <ProtoTest_sec />}
+            {protoTest && <ProtoTest protoTest={protoTest} setProtoTest={setProtoTest}/>}
+            {protoTest_sec && <ProtoTest_sec protoTest_sec={protoTest_sec} setProtoTest_sec={setProtoTest_sec}/>}
         </section>
     )
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import style from './../styles/ProtoTest.module.css';
 import axios from 'axios';
-
+import arrow from './../images/backArrow.svg';
 
 
 
@@ -46,7 +46,7 @@ const Result = ({correct}) => {
 
 //const src = 'http://80.78.254.78:8000/task/list/1/';
 
-const ProtoTest = () => {
+const ProtoTest = ({protoTest_sec, setProtoTest_sec}) => {
 
  /*   const [variants, setVariants] = useState([]);
 
@@ -63,7 +63,6 @@ const ProtoTest = () => {
     const [correct, setCorrect] = useState(0);
     const question = Questions[step];
     const onClickVariant = (index) => {
-        console.log(step, index);
         setStep(step + 1);
         if (index === question.correct) {
             setCorrect(correct + 1);
@@ -77,6 +76,7 @@ const ProtoTest = () => {
     const percentage = Math.round(step / Questions.length * 100);
     return (
         <section className={style.testWindow}>
+            <button className={style.backBtn} onClick={() => {setProtoTest_sec(false)}}><img src={arrow}/></button>
             <div className={style.test}>
                 <div className={style.progress} style={{width: `${percentage}%`}}></div>
                 <h1>{question.title}</h1>
